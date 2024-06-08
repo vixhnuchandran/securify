@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build"
+    }
+  ],
+  "routes": [
+    { "src": "/login.html", "dest": "/login.html" },
+    { "src": "/public.html", "dest": "/public.html" },
+    { "src": "/private1.html", "dest": "/private1.html" },
+    { "src": "/private2.html", "dest": "/private2.html" },
+    { "src": "/private3.html", "dest": "/private3.html" },
+    { "src": "/style.css", "dest": "/style.css" },
+    { "src": "/main.js", "dest": "/main.js" },
+    { "src": "/auth.js", "dest": "/auth.js" },
+    { "src": "/assets/(.*)", "dest": "/assets/$1" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}
